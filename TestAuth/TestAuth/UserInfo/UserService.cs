@@ -3,7 +3,7 @@ using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-
+using System.Net;
 namespace TestAuth.UserInfo
 {
     public class UserService
@@ -46,6 +46,7 @@ namespace TestAuth.UserInfo
         public UserData GetUserInfo(string userURL, string accessToken)
         {
 
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
             var  httpResponse = GetHttpResponse(userURL, accessToken);
             var  httpResponseResult = httpResponse.Result;
             string userJsonData = httpResponseResult.Content.ReadAsStringAsync().Result;

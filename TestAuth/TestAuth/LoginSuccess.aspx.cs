@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web.UI;
 using TestAuth.UserInfo;
 namespace TestAuth
@@ -54,7 +55,14 @@ namespace TestAuth
                         accessToken = tokenArray[1];
                         if (!string.IsNullOrEmpty(accessToken))
                         {
-                            var userData = userService.GetUserInfo(userURL, accessToken);
+                           
+
+                            var task = Task.Run( () =>
+                            {
+                                return userService.GetUserInfo(userURL, accessToken);
+                            });
+
+                            var userData = task.Result;
                             if (userData != null)
                             {
                                 StringBuilder sbUserData = new StringBuilder();
