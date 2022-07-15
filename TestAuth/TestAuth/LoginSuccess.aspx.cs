@@ -89,7 +89,7 @@ namespace TestAuth
             }
             catch (Exception ex)
             {
-                lblResult.Text = ex.Message;
+                throw ex;
             }
         }
     }
