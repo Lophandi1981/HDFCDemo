@@ -10,7 +10,8 @@ namespace TestAuth
         /// <summary>
         /// loginSuccessURL
         /// </summary>
-        private static string loginSuccessURL = ConfigurationManager.AppSettings["LoginSuccessUrl"].ToString();       
+       // private static string loginSuccessURL = ConfigurationManager.AppSettings["LoginSuccessUrl"].ToString();
+        private static string loginSuccessURL = HttpContext.Current.Request.Url.Scheme + ":" + "//" + HttpContext.Current.Request.Url.Host + ":" + HttpContext.Current.Request.Url.Port + "/LoginSuccess.aspx";
         /// <summary>
         /// authURL
         /// </summary>
