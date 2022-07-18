@@ -3,3 +3,11 @@
 ################################################################################
 
 /TestAuth/TestAuth/obj/Release/Package/PackageTmp/bin
+/TestAuth/TestAuth/obj/Release/TransformWebConfig
+/TestAuth/TestAuth/obj/Release/.NETFramework,Version=v4.5.AssemblyAttributes.cs
+/TestAuth/TestAuth/obj/Release/TestAuth.csproj.AssemblyReference.cache
+/TestAuth/TestAuth/obj/Release/TestAuth.csproj.CoreCompileInputs.cache
+/TestAuth/TestAuth/obj/Release/TestAuth.csproj.FileListAbsolute.txt
+/TestAuth/TestAuth/obj/Release/TestAuth.dll
+/TestAuth/TestAuth/obj/Release
+/TestAuth/TestAuth/bin

@@ -71,17 +71,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AuthTransfer.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="IssueManagement.aspx" />
     <Content Include="LoginSuccess.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthTransfer.aspx.cs">
+      <DependentUpon>AuthTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuthTransfer.aspx.designer.cs">
+      <DependentUpon>AuthTransfer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IssueManagement.aspx.cs">
+      <DependentUpon>IssueManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IssueManagement.aspx.designer.cs">
+      <DependentUpon>IssueManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginSuccess.aspx.cs">
       <DependentUpon>LoginSuccess.aspx</DependentUpon>
@@ -93,6 +109,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInfo\UserData.cs" />
     <Compile Include="UserInfo\UserService.cs" />
+    <Compile Include="UserInfo\UserServiceWithWebClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
